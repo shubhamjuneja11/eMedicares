@@ -244,6 +244,9 @@ def question(request):
         except:
             pass
         print("3rererer")
+        age = request.session['age']
+        sex = request.session['sex']
+        ob.get_data(sex, age)
         ob.add_symptoms(i)
         request.session['a']=i
         a = ob.get_question()
