@@ -58,18 +58,24 @@ class medget:
     def check_risk(self,request ):
         try:
             a=request.session['a']
+            print("i exist")
+            print(a)
         except:
             a=[]
+            print("i dont")
         age = request.session['age']
         sex = request.session['sex']
         self.get_data(sex, age)
         self.add_symptoms(a)
         try:
+            print("try block")
+            print(self.user_data.conditions)
             if self.user_data.conditions[0]['probability'] > 0.7:
                 return 1
             else:
                 return 0
         except:
+            print("sorry brooooooooooooo")
             return 0
 
     def get_result(self, ):
