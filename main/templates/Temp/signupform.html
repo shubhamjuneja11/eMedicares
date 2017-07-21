@@ -7,34 +7,108 @@
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>Login and Registration Form with HTML5 and CSS3</title>
+       <title>Signin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
         <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="{%static 'images/facicon.ing' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'css/signupformstyle.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/animate-custom.css' %}" />
+
+
+
+
+<link href="{%static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="{%static 'css/style.css'%}" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="{%static 'css/slider.css'%}">
+<script src="{%static 'js/jquery-1.11.1.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{%static 'js/easing.js'%}"></script>
+<!--/web-font-->
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!--/script-->
+
+
+
+
+
     </head>
     <body>
+   
+    <div class="main-header" id="house">
+            <div class="header-strip">
+               <div class="container">
+                <p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">shubhamjuneja11@gmail.com</a></p>
 
-            <header>
+                <div class="clearfix"></div>
+            </div>
+            </div>
+            <div class="header-middle">
+              <div class="header-search">
+               <form action="#" method="post">
 
-            </header>
+
+
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+
+                <div class="header-top">
+              <div class="container">
+                     <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                        <div class="logo">
+                            <h1><a class="navbar-brand" href="{%url 'main:index' %}">e<span>M</span>edicare  <img src="{%static 'img/logo.png'%}" alt=" " /></a></h1>
+                        </div>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                          <div class="top-menu">
+                            <nav class="menu menu--francisco">
+                                    <ul class="nav navbar-nav menu__list">
+                                        <li class="menu__item menu__item--current"><a href="{%url 'main:index' %}" class="menu__link"><span class="menu__helper">Home</span></a></li>
+                                        <li class="menu__item"><a href="{%url 'main:aboutus' %}" class="menu__link"><span class="menu__helper">About Us</span></a></li>
+                                
+                                        <li class="menu__item"><a href="{%url 'main:contactus' %}" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
+                                    
+                                    </ul>
+                                </nav>
+                            </div>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+
+               <div class="clearfix"></div>
+            </div>
+    </div>
+            
             <section>
                 <div id="container_demo" >
-                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  --> 
                     <a class="hiddenanchor" id="toregister"></a>
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  method="POST" action="{% url 'main:login_req' %}" autocomplete="on">
+                            <form  method="POST" action="{% url 'main:login_req' %}" autocomplete="on" >
+
                                 {% csrf_token %}
+                              
                                 <h1>Log in</h1>
                                 <p>
-                                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
-                                    <input id="username" name="email" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                    <label for="username" class="uname" data-icon="u" > Your email</label>
+                                    <input id="username" name="email" required="required" type="text" placeholder="mymail@mail.com"/>
                                 </p>
                                 <p>
                                     <label for="password" class="youpasswd" data-icon="p"> Your password </label>
@@ -48,15 +122,18 @@
 								</p>
                                 <p class="change_link">
 									Not a member yet ?
-									<a href="#toregister" class="to_register">Join us</a>
+									<a href="#toregister" class="to_register" onclick="changetitletosignup()">Join us</a>
 								</p>
                             </form>
 
                         </div>
 
                         <div id="register" class="animate form">
+
                             <form  method="POST" action="{% url 'main:register_user' %}" autocomplete="on">
                                 {% csrf_token %}
+ 
+                                </script>
                                 <h1> Sign up </h1>
 
                                 <p>
@@ -74,7 +151,7 @@
 								</p>
                                 <p class="change_link">
 									Already a member ?
-									<a href="#tologin" class="to_register"> Go and log in </a>
+									<a href="#tologin" class="to_register" onclick="changetitletosignin()"> Go and log in </a>
 								</p>
                             </form>
                         </div>
@@ -83,5 +160,18 @@
                 </div>
             </section>
         </div>
+           <script>
+    function changetitletosignup(){
+        document.title='Signup'
+
+    }
+    function changetitletosignin() {
+        document.title='Signin'
+    }
+
+
+
+    </script>
     </body>
+  
 </html>

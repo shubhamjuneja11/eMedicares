@@ -71,7 +71,7 @@ class medget:
         try:
             print("try block")
             print(self.user_data.conditions)
-            if self.user_data.conditions[0]['probability'] > 0.7:
+            if self.user_data.conditions[0]['probability'] > 0.01:
                 return 1
             else:
                 return 0
