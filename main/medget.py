@@ -52,9 +52,6 @@ class medget:
 
     def get_question(self,request):
         try:
-            age = request.session['age']
-            sex = request.session['sex']
-            self.get_data(sex, age)
             self.user_data = self.api.diagnosis(self.user_data)
             optn_list = []
             ques = {}
