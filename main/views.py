@@ -5,7 +5,7 @@ from .medget import medget
 from django.views import generic
 from django.db import IntegrityError
 import re
-import medplace
+from main import medplace
 from django.urls import reverse
 # for older versoins of Django use:
 # from django.core.urlresolvers import reverse
@@ -143,7 +143,7 @@ def search1(request):
             # t=Topic.objects.get(topic_text=topic.cleaned_data.get('topic_text'))
 
         else:
-            print topic.errors
+            
             return HttpResponse(topic.errors)
 
 
@@ -151,7 +151,7 @@ def search1(request):
 def register(request):
     try:
         if request.method == 'POST':
-            print "post"
+            
             em=str(request.POST['email'])
             pw=str(request.POST['pwd'])
             p = Users(email=em,pwd=pw)
