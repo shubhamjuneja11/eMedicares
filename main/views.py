@@ -248,7 +248,7 @@ def question(request):
         a = ob.get_question()
         return render(request, 'Temp/myquestion.html', {"ques_dict": a})
         # return HttpResponse(a)
-    elif not ob.check_risk():
+    elif not ob.check_risk(request):
         i = {}
         # id = request.POST.get('id')
         if request.POST.get('yes'):

@@ -11,7 +11,7 @@ class medget:
 
 
     def add_symptoms(self, ids):
-        
+
         for i in ids:
             self.user_data.add_symptom( str(i[str(u'id')]), str(i[str(u'status')]))
         #absent status add
@@ -55,7 +55,15 @@ class medget:
 
         #return self.user_data.question.items
 
-    def check_risk(self, ):
+    def check_risk(self,request ):
+        try:
+            a=request.session['a']
+        except:
+            a=[]
+        age = request.session['age']
+        sex = request.session['sex']
+        self.get_data(sex, age)
+        self.add_symptoms(a)
         if self.user_data.conditions[0]['probability'] > 0.7:
             return 1
         else:
