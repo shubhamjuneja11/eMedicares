@@ -18,15 +18,17 @@ class medget:
 
 
 
-    def add_symptoms(self, ids):
+    def add_symptoms(self, ids,request):
         print("shit happens hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+        age = request.session['age']
+        sex = request.session['sex']
+        self.get_data(sex, age)
         try:
             for i in ids:
                 self.user_data.add_symptom( str(i[str(u'id')]), str(i[str(u'status')]))
+            print("i am fine")
         except:
-            temp=vars(self)
-            for i in temp:
-                print(i)
+            print("exception")
         #absent status add
 
     def search_symptoms(self, symptoms_str):
@@ -48,8 +50,11 @@ class medget:
         #return self.api.search('headache')
         return search_res
 
-    def get_question(self, ):
+    def get_question(self,request):
         try:
+            age = request.session['age']
+            sex = request.session['sex']
+            self.get_data(sex, age)
             self.user_data = self.api.diagnosis(self.user_data)
             optn_list = []
             ques = {}

@@ -235,8 +235,8 @@ def question(request):
     if request.session.has_key('lis'):
         i = request.session['lis']
         print(" im culprit 1")
-        ob.add_symptoms(i)
-        a = ob.get_question()
+        ob.add_symptoms(i,request)
+        a = ob.get_question(request)
         return render(request, 'Temp/myquestion.html', {"ques_dict": a})
         # return HttpResponse(a)
     elif not ob.check_risk():
