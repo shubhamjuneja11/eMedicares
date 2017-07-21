@@ -5,7 +5,7 @@ from .medget import medget
 from django.views import generic
 from django.db import IntegrityError
 import re
-from main import medplace
+import medplace
 from django.urls import reverse
 # for older versoins of Django use:
 # from django.core.urlresolvers import reverse
@@ -96,7 +96,7 @@ def search(request):
 
 
 def search1(request):
-        
+        print(request)
         topic = SearchForm(request.POST, initial={"topic_text": "c"})
         if topic.is_valid():
             sim_str = topic.cleaned_data.get('topic_text')
@@ -143,6 +143,7 @@ def search1(request):
             # t=Topic.objects.get(topic_text=topic.cleaned_data.get('topic_text'))
 
         else:
+            print topic.errors
             return HttpResponse(topic.errors)
 
 
@@ -150,7 +151,7 @@ def search1(request):
 def register(request):
     try:
         if request.method == 'POST':
-           
+            print "post"
             em=str(request.POST['email'])
             pw=str(request.POST['pwd'])
             p = Users(email=em,pwd=pw)
@@ -169,8 +170,11 @@ def logInReq(request):
             try:
                 em=log.cleaned_data.get('email')
                 pw=log.cleaned_data.get('pwd')
+                print(em)
+                print(pw)
                 user = Users.objects.get(email = em,pwd = pw)
                 request.session['user_id'] = user.id
+                # return render(request,'Temp/dashboard.html')
                 return HttpResponseRedirect(reverse('main:checknow'))
             except Users.DoesNotExist:
                 return HttpResponse("WRONG USERNAME OR PASSWORD")
@@ -178,9 +182,9 @@ def logInReq(request):
 
 """
 class LoggedIn(generic.DetailView):
-	model = Users
-	template_name = 'Temp/logged.html'
-	context_object_name = 'user_id'
+    model = Users
+    template_name = 'Temp/logged.html'
+    context_object_name = 'user_id'
 """
 
 
@@ -201,13 +205,12 @@ def quest(request):
             try:
                 user = Users.objects.get(pk=uid)
             except ObjectDoesNotExist:
-               return render(request,'Temp/index.html')
+                HttpResponse("Object not found")
 
             age = request.session['age']
             sex = request.session['sex']
-            print("calling get dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+            print (age)
             ob.get_data(sex, age)
-            print("return         calling get dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
             lis = []
             for i in checklist:
                 dic = {}
@@ -218,6 +221,7 @@ def quest(request):
 
             # ob.add_symptoms(lis)
             request.session['lis'] = lis
+            print("44455555555555555555555555")
             return HttpResponseRedirect(reverse('main:question'))
             # return HttpResponse(a)
             # ob.get_questions()
@@ -229,14 +233,15 @@ def question(request):
     # global j
     # j +=1
     i = []
-    age = request.session['age']
-    sex = request.session['sex']
-    ob.get_data(sex, age)
     if request.session.has_key('lis'):
         i = request.session['lis']
-        print(" im culprit 1")
-        ob.add_symptoms(i,request)
-        a = ob.get_question(request)
+        try:
+            del request.session['lis']
+        except:
+            pass
+        print("3rererer")
+        ob.add_symptoms(i)
+        a = ob.get_question()
         return render(request, 'Temp/myquestion.html', {"ques_dict": a})
         # return HttpResponse(a)
     elif not ob.check_risk():
@@ -254,7 +259,6 @@ def question(request):
 
         a = []
         a.append(i)
-        print("i am culprit 2222")
         ob.add_symptoms(a)
         a = ob.get_question()
         # j = i
@@ -281,13 +285,21 @@ def doc_list(request):
     loc_dict1 = {}
     try:
         loc_dict1['lat'] = request.COOKIES.get('latitude')
+        print("in try1")
     except:
         loc_dict1['lat'] = loc_dict['latitude'] #request.COOKIES.get('latitude')
+        print("in catch 1")
     try:
         loc_dict1['lng'] = request.COOKIES.get('longitude')
+        print("in try 2")
     except:
         loc_dict1['lng'] = loc_dict['longitude'] #request.COOKIES.get('longitude')
+        print("in catch 2")
     doctor_type = request.POST['doctor_type']
+    print("                         ")
+    print(loc_dict1['lat'])
+    print(loc_dict1['lng'])
+    print("                                       ")
     doctor = doctor_type.split()
     doctor_search = doctor[-2] + doctor[-1]
     plac = medplace.get_places(lat_lng=loc_dict1, doctor_type=doctor_search)
@@ -306,6 +318,7 @@ def ajaxreq(request):
     return render(request, 'Temp/request0.html')
 
 def basicsymptoms(request):
+    print("dcc")
     sex = request.GET['sex']
     age = request.GET['age']
     request.session['sex'] = sex
