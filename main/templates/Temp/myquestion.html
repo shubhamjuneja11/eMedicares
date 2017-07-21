@@ -1,0 +1,75 @@
+<script>
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="mail-box">
+        <aside class="lg-side">
+            <div class="inbox-head">
+                <br>
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="panel panel-warning" style="color: #000">
+                                <!-- Default panel contents -->
+                                <div class="panel-heading">Answer Few Question </div>
+                                <div style="padding: 20px;text-align: justify">
+                                       {{ ques_dict.text }}
+                                       <br><br>
+  <form class="form" method="POST" id="myform" ><!--Not applied yet -->
+
+{% for i in ques_dict.option %}
+{% if ques_dict.option|length > 1 %}
+<input type="radio" name="option" checked="checked" value="{{ i.id }}">
+{{ i.name }}<br>
+{% else %}
+<input type="radio" name="option" value="{{ i.id }}" checked="checked" hidden>
+{% endif %}
+{% endfor %}
+{% if ques_dict.option|length < 2 %}
+<input onclick="newques()"  name="yes" value="yes" class="btn mini btn-success">
+
+                     <input onclick="newques()" name="no" value="no" class="btn mini btn-danger" >
+                    <input onclick="newques()"  name="dont" value="don't know" class="btn mini btn-warning">
+{% else %}
+<br>
+    <input onclick="newques()"  name="yes" class="btn btn-primary" value="Next"><br>
+{% endif %}
+   {% csrf_token %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </form>
+
+            </div>
+            </form>
+    </div>
+
+    </aside>
+</div>
+</div>

@@ -1,0 +1,722 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>{% load static %}
+<html>
+
+<head>
+<title>eMedicare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="eMedicare Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{%static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="{%static 'css/style.css'%}" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="{%static 'css/slider.css'%}">
+<script src="{%static 'js/jquery-1.11.1.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{%static 'js/easing.js'%}"></script>
+<!--/web-font-->
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+
+
+
+
+
+</head>
+<body>
+<!--start-home-->
+
+<div class="main-header" id="house">
+			<div class="header-strip">
+			   <div class="container">
+				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">shubhamjuneja11@gmail.com</a></p>
+				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>9958959639</p>
+
+				<div class="clearfix"></div>
+			</div>
+			</div>
+			<div class="header-middle">
+			  <div class="header-search">
+			   <form action="#" method="post">
+
+
+
+				<div class="clearfix"></div>
+			</form>
+		</div>
+	</div>		<!--header-top-->
+			<div class="header-top">
+			  <div class="container">
+					 <nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						<div class="logo">
+							<h1><a class="navbar-brand" href="{%url 'main:index' %}">e<span>M</span>edicare  <img src="{%static 'img/logo.png'%}" alt=" " /></a></h1>
+						</div>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						  <div class="top-menu">
+							<nav class="menu menu--francisco">
+									<ul class="nav navbar-nav menu__list">
+										<li class="menu__item menu__item--current"><a href="{%url 'main:index' %}" class="menu__link"><span class="menu__helper">Home</span></a></li>
+										<li class="menu__item"><a href="{%url 'main:aboutus' %}" class="menu__link"><span class="menu__helper">About Us</span></a></li>
+										<li class="menu__item "><a href="{%url 'main:gallery' %}" class="menu__link"><span class="menu__helper">Gallery</span></a></li>
+										<li class="menu__item"><a href="{%url 'main:contactus' %}" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
+										<button type="button" class="btn btn-success"style="display:block;padding:10px;margin-top:20px;margin-left:30px;" ><a href="login"> Start Check-up</a></button>
+									</ul>
+								</nav>
+							</div>
+					</div>
+					<!-- /.navbar-collapse -->
+				</nav>
+
+			   <div class="clearfix"></div>
+			</div>
+	</div>
+<!--//header-top-->
+ <!-- //Line Slider -->
+	 <div class="top_banner">
+		<!-- SVG Arrows -->
+		<div class="svg-wrap">
+			<svg width="64" height="64" viewBox="0 0 64 64">
+				<path id="arrow-left" d="M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z" />
+			</svg>
+			<svg width="64" height="64" viewBox="0 0 64 64">
+				<path id="arrow-right" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
+			</svg>
+		</div>
+
+		<div class="sleekslider">
+			<!-- Slider Pages -->
+			<div class="slide active bg-1">
+				<div class="slide-container">
+					<div class="slide-content">
+						<p>Welcome to <span class="s-p">eMedicare</span>!</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="slide bg-2">
+				<div class="slide-container">
+					<div class="slide-content">
+						<p>We <span class="s-p">care</span> for you </p>
+
+					</div>
+				</div>
+			</div>
+			<div class="slide bg-3">
+				<div class="slide-container">
+					<div class="slide-content">
+						<p>Welcome to <span class="s-p">eMedicare</span>!</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="slide bg-4">
+				<div class="slide-container">
+					<div class="slide-content">
+					<p> <span class="s-p">Online</span> assistant for your health problems </p>
+
+					</div>
+				</div>
+			</div>
+			<div class="slide bg-5">
+				<div class="slide-container">
+					<div class="slide-content">
+					<p>Welcome to <span class="s-p">eMedicare</span>!</p>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Navigation Arrows with Thumbnails -->
+			<nav class="nav-split">
+				<a class="prev" href="">
+					<span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-left" /></svg></span>
+					<div>
+						<h3>test</h3>
+						<img alt="Previous thumb"/>
+					</div>
+				</a>
+				<a class="next" href="">
+					<span class="icon-wrap"><svg class="icon" width="22" height="22" viewBox="0 0 64 64"><use xlink:href="#arrow-right" /></svg></span>
+					<div>
+						<h3>test</h3>
+						<img alt="Next thumb"/>
+					</div>
+				</a>
+			</nav>
+
+			<!-- Pagination -->
+			<nav class="pagination">
+				<span class="current"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</nav>
+
+			<!-- Navigation Tabs -->
+			<nav class="tabs">
+				<div class="tab-container">
+					<ul>
+						<li class="current"><a href="#"><span>		We</span></a></li>
+						<li><a href="#"><span></span>		Care</a></li>
+						<li><a href="#"><span></span>		For </a></li>
+						<li><a href="#"><span></span>		Your</a></li>
+						<li><a href="#"><span></span>		Health </a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<!-- JavaScripts -->
+		<script type="text/javascript" src="{%static 'js/sleekslider.min.js'%}"></script>
+		<script type="text/javascript" src="{%static 'js/app.js' %}"></script>
+      <!--welcome-->
+ </div>
+
+        <!-- /Line Slider -->
+	</div>
+    <!--footer-->
+
+		<!-- Services -->
+		<div class="services" id="services">
+			<div class="container">
+
+				<div class="inner-w3">
+					    <div class="sub-hd">
+						<h3 class="tittle">ABOUT <span>US</span></h3>
+					</div>
+					</div>
+
+				<div class="inner_tabs">
+				    <h2 class="tittle">Welcome to eMedicare</h2>
+					<p class="sub-para">eMedicare is an online platform which provides its user a better option to diagnose their health problems by entering their symptoms. Effective medical care is now just a few clicks away. </p>
+					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+						<ul id="myTab" class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Quick Assistance</a></li>
+							<li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Symptoms</a></li>
+							<li role="presentation"><a href="#tree" role="tab" id="tree-tab" data-toggle="tab" aria-controls="tree">Results</a></li>
+							<li role="presentation"><a href="#safari" role="tab" id="safari-tab" data-toggle="tab" aria-controls="safari">Consultation</a></li>
+							<li role="presentation"><a href="#trekking" role="tab" id="trekking-tab" data-toggle="tab" aria-controls="trekking">Action Plan</a></li>
+						</ul>
+						<div id="myTabContent" class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
+								<div class="col-md-5 col-sm-5 tab-image">
+									<img src="{%static 'img/4.jpg'%}" alt="eMedicare">
+								</div>
+								<div class="col-md-7 col-sm-7 tab-info">
+									<p>In doubt of your current health? Feeling a bit hazy or lethargic? Having a headache or a joint pain is not allowing you to move? Want a quick checkup to figure out what could be the reason? No worries, just follow few easy steps and and get a quick online report.</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="tours" aria-labelledby="tours-tab">
+								<div class="col-md-5 col-sm-5 tab-image">
+									<img src="{%static 'img/8.jpg' %}" alt="eMedicare">
+								</div>
+								<div class="col-md-7 col-sm-7 tab-info">
+									<p>Enter your symptoms and fill in other details as required by our system to search for the disease related to your symptoms. For example: If you are suffereing from a headache, then select headache and proceed similarly.</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="tree" aria-labelledby="tree-tab">
+								<div class="col-md-5 col-sm-5 tab-image">
+									<img src="{%static 'img/5.jpg'%}" alt="eMedicare">
+								</div>
+								<div class="col-md-7 col-sm-7 tab-info">
+									<p> Our system will generate the results based on your symptoms. The result will be the disease from which you may be suffering or are prone to, if proper prevention measures are not taken.</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="safari" aria-labelledby="safari-tab">
+								<div class="col-md-5 col-sm-5 tab-image">
+									<img src="{%static 'img/6.jpg'%}" alt="eMedicare">
+								</div>
+								<div class="col-md-7 col-sm-7 tab-info">
+									<p>Our system will also suggest and consult doctors as per the symptoms you enter. The doctors are consulted on the basis of your location and aslo on the basis of their field of expertise.</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="trekking" aria-labelledby="trekking-tab">
+								<div class="col-md-5 col-sm-5 tab-image">
+									<img src="{%static 'img/7.jpg'%}" alt="eMedicare">
+								</div>
+								<div class="col-md-7 col-sm-7 tab-info">
+									<p>It is advisable to visit a doctor if any chronic disease is detected and chalk out an action plan to get healthy as soon as possible.</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- //Services -->
+		<!--eMedicare-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="medicinal-w3">
+							<div class="container">
+							    <div class="sub-hd">
+									<h3 class="tittle two">OUR <span>SERVICES</span></h3>
+								</div>
+								<div class="medicinal-w3-grids one">
+									<div class="col-md-6 medicinal-w3-grid">
+										<div class="col-md-8 medicinal-w3-left">
+											<h4>Free of Cost Checkup</h4>
+											<p>eMedicare doesn't charge users for its services. </p>
+										</div>
+										<div class="col-md-4 medicinal-w3-right">
+											<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+												<a href="#" class="hi-icon icon1"></a>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="col-md-6 medicinal-w3-grid">
+										<div class="col-md-4 medicinal-w3-right">
+											<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+												<a href="#" class="hi-icon icon2"></a>
+											</div>
+										</div>
+										<div class="col-md-8 medicinal-w3-left1">
+											<h4>Consultaion on Doctors</h4>
+											<p>Get free consultation on doctors based on your location. Doctors are also consulted on the basis of the disease detected. </p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="medicinal-w3-grids">
+									<div class="col-md-6 medicinal-w3-grid">
+										<div class="col-md-8 medicinal-w3-left">
+											<h4>Access To Your Past Records</h4>
+											<p>Your history of past searches (virtual medical history) is safe with us and can be retrieved any time for your perusal. </p>
+										</div>
+										<div class="col-md-4 medicinal-w3-right">
+											<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+												<a href="#" class="hi-icon icon3"></a>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="col-md-6 medicinal-w3-grid">
+										<div class="col-md-4 medicinal-w3-right">
+											<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+												<a href="#" class="hi-icon icon4"></a>
+											</div>
+										</div>
+										<div class="col-md-8 medicinal-w3-left1">
+											<h4>Easy To Use and Reliable System</h4>
+											<p>eMedicare is easy to use and the list of its happy customers is a testament of its reliablity. </p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="review-slider">
+		<div class="sub-hd">
+						<h3 class="tittle">OUR LATEST <span>NEWS</span></h3>
+					</div>
+								 <ul id="flexiselDemo1">
+								<li>
+									<a href="http://www.medicalnewstoday.com/articles/318453.php"><img src="{%static 'img/n1.jpg'%}" alt=""/></a>
+									<div class="slide-title"><h4>Ovarian cancer: Statins might be effective with diet control</div>
+									<div class="prom-bottom">
+									<div class="prom-left">
+										<h5>17 July</h5>
+									</div>
+									<div class="prom-right">
+									<h5> 2017 </h5>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								</li>
+								<li>
+									<a href="http://www.medicalnewstoday.com/articles/318430.php"><img src="{%static 'img/n2.jpg'%}" alt=""/></a>
+									<div class="slide-title"><h4>HIV infection boosted by seized cell signaling</h4></div>
+									<div class="prom-bottom">
+									<div class="prom-left">
+										<h5>17 July</h5>
+									</div>
+									<div class="prom-right">
+									<h5> 2017 </h5>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								</li>
+								<li>
+									<a href="http://www.medicalnewstoday.com/articles/318454.php"><img src="{%static 'img/n3.jpg'%}" alt=""/></a>
+									<div class="slide-title"><h4>Underdeveloped brain network after 30 may impact mental health</h4></div>
+									<div class="prom-bottom">
+									<div class="prom-left">
+										<h5>17 July</h5>
+									</div>
+									<div class="prom-right">
+									<h5> 2017 </h5>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								</li>
+								<li>
+									<a href="http://www.medicalnewstoday.com/articles/318459.php"><img src="{%static 'img/n4.jpg'%}" alt=""/></a>
+									<div class="slide-title"><h4>Unhealthful plant-based diet can increase heart disease risk</h4></div>
+									<div class="prom-bottom">
+									<div class="prom-left">
+										<h5>17 July</h5>
+									</div>
+									<div class="prom-right">
+									<h5> 2017 </h5>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								</li>
+								<li>
+									<a href="http://www.medicalnewstoday.com/articles/318453.php"><img src="{%static 'img/n1.jpg'%}" alt=""/></a>
+									<div class="slide-title"><h4>Ovarian cancer: Statins might be effective with diet control </h4></div>
+									<div class="prom-bottom">
+									<div class="prom-left">
+										<h5>17 July</h5>
+									</div>
+									<div class="prom-right">
+									<h5> 2017 </h5>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								</li>
+								<li>
+									<a href="http://www.medicalnewstoday.com/releases/318425.php"><img src="{%static 'img/n5.jpg'%}" alt=""/></a>
+									<div class="slide-title"><h4>Study: Diet not connected to GI problems in children with autism </h4></div>
+									<div class="prom-bottom">
+									<div class="prom-left">
+										<h5>17 July</h5>
+									</div>
+									<div class="prom-right">
+									<h5> 2017 </h5>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								</li>
+								<li>
+									<a href="http://www.medicalnewstoday.com/releases/318458.php"><img src="{%static 'img/n6.jpg'%}" alt=""/></a>
+									<div class="slide-title"><h4>Women exposed to smoke while in womb more likely to miscarry </h4></div>
+									<div class="prom-bottom">
+									<div class="prom-left">
+										<h5>17 July</h5>
+									</div>
+									<div class="prom-right">
+									<h5> 2017 </h5>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								</li>
+							</ul>
+							<script type="text/javascript">
+						$(window).load(function() {
+
+						  $("#flexiselDemo1").flexisel({
+								visibleItems:4,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 3000,
+								pauseOnHover: false,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: {
+									portrait: {
+										changePoint:480,
+										visibleItems: 2
+									},
+									landscape: {
+										changePoint:640,
+										visibleItems: 3
+									},
+									tablet: {
+										changePoint:800,
+										visibleItems: 4
+									}
+								}
+							});
+							});
+						</script>
+						<script type="text/javascript" src="{%static 'js/jquery.flexisel.js' %}"></script>
+				</div>
+   <!--//news-->
+   <div class="bottom">
+		<div class="container">
+			<div class="bottom-top">
+				<!--h3>Opening Hours of <span class="opening">eMedicare</span></h3>-->
+				<p>"Effective healthcare depends on self-care;</p>
+				<p>This fact is currently heralded as it were a discovery."</p>
+				<p>                                      -Ivan Illich</p>
+				<p>"Health is like money, we never have a true idea of its value</p>
+				<p>until we LOST it"</p>
+				<p>                                      -Josh Billings</p>
+				<!--[if lt IE9]>
+				<div class="opening_hours">
+						 <ul class="times">
+							<h4>Opening <span class="opening">Hours</span></h4>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Monday</span><div class="hours">9:30 am – 3:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Tuesday</span><div class="hours">10:30 am – 5:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Wednesday</span><div class="hours">8:30 am – 1:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Thrusday</span><div class="hours">11:30 am – 2:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Friday</span><div class="hours">10:00 am – 2:00 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Saturday</span><div class="hours">11:30 am – 2:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Sunday</span><div class="hours">Family Doctor</div>  <div class="clearfix"></div></li>
+
+						 </ul>
+					</div><![endif] -->
+			</div>
+		</div>
+</div>
+   <!--/reviews-->
+	<div id="review" class="testimonials-review">
+		<div class="container">
+		<div class="sub-hd">
+						<h3 class="tittle lost">WHAT PATIENTS ARE SAYING <span>ABOUT US</span></h3>
+					</div>
+				<div class="testimonials">
+				  <div class="monials">
+				      <!--//screen-gallery-->
+						<div class="sreen-gallery-cursual">
+							 <!-- required-js-files-->
+							<link href="{%static 'css/owl.carousel.css'%}" rel="stylesheet">
+							    <script src="{%static 'js/owl.carousel.js'%}"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items : 1,
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation : false,
+							        navigationText :  false,
+							        pagination : true,
+							      });
+							    });
+							    </script>
+								 <!--//required-js-files-->
+						       <div id="owl-demo" class="owl-carousel">
+					                   <div class="item-owl">
+
+                                            <p class="speech">eMedicare is really helpful in diagnosing the problem. It is indeed a virtual doctor.</p>
+                                            <div class="client-info">
+                                                <img src="{%static 'img/t1.jpg'%}" alt=" " />
+
+                                                <h4>John Allen</h4>
+                                                <span>Boston, USA</span>
+                                            </div>
+                                        </div><!-- /.item -->
+					                     <div class="item-owl">
+
+                                            <p class="speech">Everytime I feel that there is something wrong with my health, I turn to eMedicare for assistance. It helps me to know a problem beforehand which inturn allows me to take appropriate measures.</p>
+                                            <div class="client-info">
+                                                <img src="{%static 'img/t2.jpg'%}" alt=" " />
+
+                                                <h4>John Doe</h4>
+                                                <span>London, UK</span>
+                                            </div>
+                                        </div><!-- /.item -->
+					                      <div class="item-owl">
+										  <p class="speech">eMedicare is a great initiative to make people aware of any health problems free of cost in a very easy. It has helped thousands of people across the world including me.</p>
+                                            <div class="client-info">
+                                                <img src="{%static 'img/t3.jpg'%}" alt=" " />
+
+                                                <h4>John Leo</h4>
+                                                <span>Berlin, Germany</span>
+                                            </div>
+                                        </div><!-- /.item -->
+				              </div>
+						<!--//screen-gallery-->
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//reviews-->
+	<!--/start-footer-section-->
+			<div class="footer-section">
+				<div class="container">
+					<div class="footer-grids wow bounceIn animated" data-wow-delay="0.4s">
+						<div class="col-md-3 footer-grid">
+						<h4>The <span>Team</span></h4>
+						<div class="border2"></div>
+						  <p>We are a team of 3 developers. We all are passionate about social welfare and see technology as a powerful tool for the betterment of the society.</p>
+						  <p class="sub">SHUBHAM JUNEJA</p>
+						  <p>         -Lead, eMedicare</p>
+						</div>
+						<div class="col-md-3 footer-grid tags">
+								<h4>The <span>Tags</span></h4>
+								<div class="border2"></div>
+							<ul class="tag">
+								<li><a href="#">Diagnosis</a></li>
+								<li><a href="#">Symptoms</a></li>
+								<li><a href="#">Health</a></li>
+								<li><a href="#">Doctor</a></li>
+								<li><a href="#">Medicine</a></li>
+								<li><a href="#">Treatment</a></li>
+								<li><a href="#">Hospital</a></li>
+								<li><a href="#">Analysis</a></li>
+								<li><a href="#">Treatment</a></li>
+								<li><a href="#">Medical</a></li>
+								<li><a href="#">Anti-Biotics</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3 footer-grid tweet">
+								<h4>Latest <span>Tweets</span></h4>
+								<div class="border2"></div>
+								<div class="icon-3-square">
+										<a href="#"><i class="square-3"></i></a>
+									</div>
+							<div class="icon-text">
+								<p>I like this awesome freebie. Check it out By <a href="#"> Admin </a></p>
+								<h5>15 mins ago</h5>
+							</div>
+								<div class="clearfix"></div>
+								<div class="icon-3-square">
+										<a href="#"><i class="square-3"></i></a>
+								</div>
+								<div class="icon-text">
+								    <p>I like this awesome freebie. Check it out  By <a href="#"> Admin </a> </p>
+									<h5>15 mins ago</h5>
+								</div>
+								<div class="clearfix"></div>
+						</div>
+						<div class="col-md-3 footer-grid flickr">
+								<h4>Flickr <span>Feed </span></h4>
+								<div class="border2"></div>
+								<div class="flickr-grids">
+										<div class="flickr-grid">
+											<a href="#"><img src="{%static 'img/t1.jpg'%}" alt=" " title="CEO" /></a>
+										</div>
+										<div class="flickr-grid">
+											<a href="#"><img src="{%static 'img/t2.jpg'%}" alt=" " title="GM" /></a>
+										</div>
+										<div class="flickr-grid">
+											<a href="#"><img src="{%static 'img/t3.jpg'%}" alt=" " title="CEO" /></a>
+										</div>
+										<div class="clearfix"> </div>
+
+										<div class="flickr-grid">
+											<a href="#"><img src="{%static 'img/t2.jpg'%}" alt=" " title="GM" /></a>
+										</div>
+										<div class="flickr-grid">
+											<a href="#"><img src="{%static 'img/t3.jpg'%}" alt=" " title="CEO" /></a>
+										</div>
+										<div class="flickr-grid">
+											<a href="#"><img src="{%static 'img/t1.jpg'%}" alt=" " title="GM" /></a>
+										</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+			</div>
+		</div>
+	<!--//end-footer-section-->
+	<!--//footer-->
+	<div class="footer-bottom">
+		<div class="container">
+			<p>© 2017 EMedicare. All rights reserved </p>
+		</div>
+	</div>
+		<!--start-smooth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear'
+								 		};
+										*/
+
+										$().UItoTop({ easingType: 'easeOutQuart' });
+
+									});
+								</script>
+								<!--end-smooth-scrolling-->
+		<a href="#house" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<script src="{%static 'js/bootstrap.js' %}"></script>
+
+</body>
+</html>

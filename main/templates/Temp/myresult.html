@@ -1,0 +1,106 @@
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,700,800' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <link href='https://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/imagehover.min.css' %}" type="text/css" />
+<script>
+
+
+function getdoctors(){
+  //var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+  getLocation();
+}
+
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+    } else {
+    }
+}
+function showPosition(position) {
+    document.cookie="latitude="+position.coords.latitude;
+    document.cookie="longitude="+position.coords.longitude;
+    showdoctors();
+
+
+
+
+}
+function showdoctors(){
+  var dataz=$("#myform").serialize();
+
+$.ajax({
+
+url:"doctors",
+  dataType
+:
+'html',
+  type
+:
+"POST",
+  data:dataz ,
+  success
+:
+function (data) {
+  $("#mytext").html(data)
+  stopload();
+}
+
+
+})
+}
+
+
+</script>
+
+    <div class="container">
+        <div class="">
+            <aside class="">
+                <div class="">
+                    <br>
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="panel panel-warning" style="color: #000">
+                                    <!-- Default panel contents -->
+                                    <div class="panel-heading">Your Result </div>
+                                    <div style="padding: 20px;text-align: justify">
+                                       <b> Disease : </b>  {{ result.name }} <br>
+                   <b>Severity :</b> {{ result.severity }}<br>
+                  <b> Suggestion : </b>{{ result.probname }}
+                    {{ result.hint }}<br>
+                    <form class="form" id="myform" ><!--Not applied yet -->
+                        {% csrf_token %}
+
+                        <br>
+                        <input onclick="getdoctors()" class="btn btn-primary" name="find_doctor" id="find_doctor" value="GET NEARBY DOCTORS"><br>
+                        <input type="hidden" name="doctor_type" id="doctor_type" value="{{ result.hint }}">
+                    </form>
+
+
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+        </div>
+
+        </aside>
+    </div>
+    </div>
+      <div id = "geolocat">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

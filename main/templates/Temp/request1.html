@@ -1,0 +1,96 @@
+
+   <script>
+    /**
+     * Created by shubhamjuneja11 on 2/7/17.
+     */
+
+
+
+</script>
+
+<div class="content center">
+
+    <div class="mail-box">
+        <div class="inbox-head" style="border-top-left-radius:900px;border-top-right-radius: 900px">
+            <center><h3>Search Your Problem Here </h3>
+                <form id="myform" class="form" method="POST"><!--Not applied yet -->
+                    {% csrf_token %}
+                    <input class="abc" style="color: #000" name="topic_text" id="searcharea" required>
+                    <input class="btn btn-success btn-md nextbutton" onclick="ajaxreq2()" style="width: 100px" value="Search">
+                    <br>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-1 col-md-offset-1">
+                        <div class="panel panel-default" style="color: #000;  ">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">Common Problems</div>
+
+                            <!-- List group -->
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    HeadAche
+                                    <div class="material-switch pull-right">
+                                        <input id="someSwitchOptionDefault" name="symptom1" value="headache"
+                                               type="checkbox"/>
+                                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                                    </div>
+                                </li>
+                            
+                                <li class="list-group-item">
+                                    Tiring easily,weekness
+                                    <div class="material-switch pull-right">
+                                        <input id="someSwitchOptionSuccess" name="symptom3" value="weakness"
+                                               type="checkbox"/>
+                                        <label for="someSwitchOptionSuccess" class="label-success"></label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    Shortness of breath
+                                    <div class="material-switch pull-right">
+                                        <input id="someSwitchOptionInfo" name="symptom4" value="Shortness of breath"
+                                               type="checkbox"/>
+                                        <label for="someSwitchOptionInfo" class="label-info"></label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    Nausea
+                                    <div class="material-switch pull-right">
+                                        <input id="someSwitchOptionWarning" name="symptom5" value="Nausea"
+                                               type="checkbox"/>
+                                        <label for="someSwitchOptionWarning" class="label-warning"></label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    Weight Loss
+                                    <div class="material-switch pull-right">
+                                        <input id="someSwitchOptionDanger" name="symptom6" value="Weight Loss"
+                                               type="checkbox"/>
+                                        <label for="someSwitchOptionDanger" class="label-danger"></label>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    Abdominal Pain
+                                    <div class="material-switch pull-right">
+                                        <input id="someSwitchOptionDanger1" name="symptom7" value="Abdominal Pain"
+                                               type="checkbox"/>
+                                        <label for="someSwitchOptionDanger1" class="label-default"></label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </form>
+                                </center>
+
+
+        </div>
+    </div>
+    <div>
+
+            </div>
+</div>
