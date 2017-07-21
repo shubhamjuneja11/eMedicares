@@ -63,9 +63,9 @@ class medget:
         except:
             a=[]
             print("i dont")
-        age = request.session['age']
-        sex = request.session['sex']
-        self.get_data(sex, age)
+        mage = request.session['age']
+        msex = request.session['sex']
+        self.user_data=infermedica_api.Diagnosis(sex=msex, age=mage)
         self.add_symptoms(a)
         try:
             print("try block")
