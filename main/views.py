@@ -194,22 +194,26 @@ def quest(request):
     if request.method == 'POST':
         l = request.POST['len']
         checklist = []
+        print("11111111111")
         for i in range(int(l)):
             try:
                 checklist.append(request.POST['symptom' + str(i)])
             except:
+                print("22222222")
                 pass
         # return HttpResponse(checklist)
         if request.session.has_key('user_id'):
             uid = request.session['user_id']
             try:
+                print("3333333")
                 user = Users.objects.get(pk=uid)
             except ObjectDoesNotExist:
                 HttpResponse("Object not found")
-
+            print("444444")
             age = request.session['age']
             sex = request.session['sex']
             print (age)
+            print("55555")
             ob.get_data(sex, age)
             lis = []
             for i in checklist:
