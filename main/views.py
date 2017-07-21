@@ -256,9 +256,15 @@ def question(request):
         elif request.POST.get('dont'):
             i['id'] = str(request.POST['option'])
             i['status'] = 'unknown'
-
-        a = []
+        try:
+            a=request.session['a']
+        except:
+            a=[]
         a.append(i)
+        request.session['a']=a
+        age = request.session['age']
+        sex = request.session['sex']
+        ob.get_data(sex, age)
         ob.add_symptoms(a)
         a = ob.get_question()
         # j = i

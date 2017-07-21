@@ -11,7 +11,7 @@ class medget:
 
 
     def add_symptoms(self, ids):
-
+        
         for i in ids:
             self.user_data.add_symptom( str(i[str(u'id')]), str(i[str(u'status')]))
         #absent status add
