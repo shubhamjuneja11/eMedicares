@@ -245,6 +245,7 @@ def question(request):
             pass
         print("3rererer")
         ob.add_symptoms(i)
+        request.session['a']=i
         a = ob.get_question()
         return render(request, 'Temp/myquestion.html', {"ques_dict": a})
         # return HttpResponse(a)
