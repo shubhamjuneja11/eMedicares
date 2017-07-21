@@ -64,9 +64,12 @@ class medget:
         sex = request.session['sex']
         self.get_data(sex, age)
         self.add_symptoms(a)
-        if self.user_data.conditions[0]['probability'] > 0.7:
-            return 1
-        else:
+        try:
+            if self.user_data.conditions[0]['probability'] > 0.7:
+                return 1
+            else:
+                return 0
+        except:
             return 0
 
     def get_result(self, ):
