@@ -65,8 +65,9 @@ class medget:
             print("i dont")
         mage = request.session['age']
         msex = request.session['sex']
-        self.user_data=infermedica_api.Diagnosis(sex=msex, age=mage)
+        self.get_data(msex,mage)
         self.add_symptoms(a)
+        self.user_data = self.api.diagnosis(self.user_data)
         try:
             print("try block")
             print(self.user_data.conditions)
@@ -78,7 +79,13 @@ class medget:
             print("sorry brooooooooooooo")
             return 0
 
-    def get_result(self, ):
+    def get_result(self,request ):
+        a=request.session['a']
+        age = request.session['age']
+        sex = request.session['sex']
+        self.get_data(sex, age)
+        self.add_symptoms(a)
+        self.user_data = self.api.diagnosis(self.user_data)
         result = {}
         result['id'] = str(self.user_data.conditions[0][str('id')])
         result['name'] = str(self.user_data.conditions[0][str('name')])

@@ -233,7 +233,7 @@ def quest(request):
 
 def question(request):
 
-    global ob
+    ob = medget()
     # global j
     # j +=1
     i = []
@@ -281,7 +281,7 @@ def question(request):
         result = {}
         uid = request.session['user_id']
         user = Users.objects.get(pk=uid)
-        result = ob.get_result()
+        result = ob.get_result(request)
         History(
             email=user.email,
             dis_name=result['name'],
